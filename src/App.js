@@ -1,9 +1,9 @@
 import './App.css'
-import Login from './components/Login'
 import { CssBaseline, StyledEngineProvider } from '@mui/material'
 import { ThemeProvider } from '@mui/material/styles'
 import { useSelector } from 'react-redux'
 import themes from './themes'
+import Register from './components/Register'
 
 function App() {
     const customization = useSelector((state) => state.customization)
@@ -12,7 +12,7 @@ function App() {
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={themes(customization)}>
         <CssBaseline />
-        <Login />
+        <Register />
       </ThemeProvider>
     </StyledEngineProvider>
   )
